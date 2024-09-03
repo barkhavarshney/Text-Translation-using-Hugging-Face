@@ -77,13 +77,13 @@ trainer = Trainer(
 trainer.train()
 ```
 
-</details> <details> <summary><strong>Model Evaluation</strong></summary>
+</details> <details> <summary><strong>Model Evaluation and Deployment</strong></summary>
 Evaluate the model using BLEU score and other metrics to determine its accuracy.
-
-</details> <details> <summary><strong>Deployment</strong></summary>
+    
 Deploy the model on Hugging Face by creating a new model repository and uploading the trained model files.
 
-</details> <details> <summary><strong>Usage</strong></summary>
+
+</details> <details> <summary><strong>Usage and Advantages</strong></summary>
 Translate Sanskrit to English:
     
 ```bash
@@ -97,7 +97,7 @@ outputs = model.generate(**inputs)
 
 print(tokenizer.batch_decode(outputs, skip_special_tokens=True))
 ```
-</details> <details> <summary><strong>Advantages of the Project</strong></summary>
+
 Multilingual Capability: Supports over 100 languages without needing a pivot language.
 Low-Resource Language Support: Effective for languages with limited parallel data, like Sanskrit.
 State-of-the-art Performance: Leverages advanced neural machine translation techniques for high-quality translations.
