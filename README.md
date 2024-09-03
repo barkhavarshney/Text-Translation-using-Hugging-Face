@@ -101,6 +101,3 @@ print(tokenizer.batch_decode(outputs, skip_special_tokens=True))
 Multilingual Capability: Supports over 100 languages without needing a pivot language.
 Low-Resource Language Support: Effective for languages with limited parallel data, like Sanskrit.
 State-of-the-art Performance: Leverages advanced neural machine translation techniques for high-quality translations.
-</details> <details> <summary><strong>Challenges and Limitations</strong></summary>
-Data Availability: Limited parallel corpus for Sanskrit-English.
-Computational Resources: Requires significant GPU/TPU resources for training and fine-tuning.
