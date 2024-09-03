@@ -24,15 +24,15 @@ pip install -r requirements.txt
 ```
 
 </details> <details> <summary><strong>Explanation of Dependencies</strong></summary>
-torch: This is the core library of PyTorch, a deep learning framework used for model training and inference. You might need a specific version compatible with your CUDA version (e.g., cu117 for CUDA 11.7). Check PyTorch’s website for the right version based on your hardware.
+Torch: This is the core library of PyTorch, a deep learning framework used for model training and inference. You might need a specific version compatible with your CUDA version (e.g., cu117 for CUDA 11.7). Check PyTorch’s website for the right version based on your hardware.
 
-transformers: The Hugging Face library provides pre-trained models and tools for natural language processing (NLP), including the M2M-100 model used in this project.
+Transformers: The Hugging Face library provides pre-trained models and tools for natural language processing (NLP), including the M2M-100 model used in this project.
 
 sentencepiece: A tokenizer and text processor library that is often required by models from Hugging Face, including M2M-100.
 
-numpy: A fundamental package for numerical computing in Python, required by many machine learning libraries, including PyTorch.
+Numpy: A fundamental package for numerical computing in Python, required by many machine learning libraries, including PyTorch.
 
-pandas: Useful for data manipulation and preprocessing tasks, such as loading and cleaning the dataset before model training.
+Pandas: Useful for data manipulation and preprocessing tasks, such as loading and cleaning the dataset before model training.
 
 scikit-learn: Provides tools for model evaluation metrics like the BLEU score, precision, recall, etc. This is optional but useful for model performance evaluation.
 
@@ -42,16 +42,19 @@ Data cleaning: Preprocess the data to remove any noise or unwanted characters.
 Tokenization: Tokenize the dataset using the Hugging Face tokenizers.
 </details> <details> <summary><strong>Model Training and Fine-Tuning</strong></summary>
 Load the M2M-100 model:
-python
-Copy code
+```bash
 from transformers import M2M100ForConditionalGeneration, M2M100Tokenizer
 
 model_name = "facebook/m2m100_418M"
 model = M2M100ForConditionalGeneration.from_pretrained(model_name)
 tokenizer = M2M100Tokenizer.from_pretrained(model_name)
+```
+```
+```bash
+```
 Fine-tune the model: Fine-tune the model on the prepared dataset.
-python
-Copy code
+
+# Example code to fine-tune the model
 # Example code to fine-tune the model
 from transformers import Trainer, TrainingArguments
 
@@ -74,6 +77,8 @@ trainer = Trainer(
 )
 
 trainer.train()
+```
+```
 </details> <details> <summary><strong>Model Evaluation</strong></summary>
 Evaluate the model using BLEU score and other metrics to determine its accuracy.
 
@@ -100,6 +105,3 @@ State-of-the-art Performance: Leverages advanced neural machine translation tech
 </details> <details> <summary><strong>Challenges and Limitations</strong></summary>
 Data Availability: Limited parallel corpus for Sanskrit-English.
 Computational Resources: Requires significant GPU/TPU resources for training and fine-tuning.
-</details> <details> <summary><strong>Future Work</strong></summary>
-Expand the dataset for better model training.
-Explore other multilingual models for comparative performance.
