@@ -42,6 +42,7 @@ Data cleaning: Preprocess the data to remove any noise or unwanted characters.
 Tokenization: Tokenize the dataset using the Hugging Face tokenizers.
 </details> <details> <summary><strong>Model Training and Fine-Tuning</strong></summary>
 Load the M2M-100 model:
+    
 ```bash
 from transformers import M2M100ForConditionalGeneration, M2M100Tokenizer
 
@@ -49,12 +50,9 @@ model_name = "facebook/m2m100_418M"
 model = M2M100ForConditionalGeneration.from_pretrained(model_name)
 tokenizer = M2M100Tokenizer.from_pretrained(model_name)
 ```
-```
-```bash
-```
-Fine-tune the model: Fine-tune the model on the prepared dataset.
 
-# Example code to fine-tune the model
+Fine-tune the model: Fine-tune the model on the prepared dataset.
+```bash
 # Example code to fine-tune the model
 from transformers import Trainer, TrainingArguments
 
@@ -78,7 +76,7 @@ trainer = Trainer(
 
 trainer.train()
 ```
-```
+
 </details> <details> <summary><strong>Model Evaluation</strong></summary>
 Evaluate the model using BLEU score and other metrics to determine its accuracy.
 
@@ -87,8 +85,8 @@ Deploy the model on Hugging Face by creating a new model repository and uploadin
 
 </details> <details> <summary><strong>Usage</strong></summary>
 Translate Sanskrit to English:
-python
-Copy code
+    
+```bash
 # Set the tokenizer to Sanskrit and English
 tokenizer.src_lang = "san"
 tokenizer.tgt_lang = "eng"
@@ -98,6 +96,7 @@ inputs = tokenizer("आपले कार्य सुरु करा", return
 outputs = model.generate(**inputs)
 
 print(tokenizer.batch_decode(outputs, skip_special_tokens=True))
+```
 </details> <details> <summary><strong>Advantages of the Project</strong></summary>
 Multilingual Capability: Supports over 100 languages without needing a pivot language.
 Low-Resource Language Support: Effective for languages with limited parallel data, like Sanskrit.
