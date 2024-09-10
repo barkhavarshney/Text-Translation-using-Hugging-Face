@@ -36,7 +36,11 @@ Pandas: Useful for data manipulation and preprocessing tasks, such as loading an
 scikit-learn: Provides tools for model evaluation metrics like the BLEU score, precision, recall, etc. This is optional but useful for model performance evaluation.
 
 </details> <details> <summary><strong>Data Preparation</strong></summary>
-Download the dataset: Download the Sanskrit-English parallel corpus from [source].
+Download the dataset: Download the Sanskrit-English parallel corpus from 
+    
+```bash
+    https://paperswithcode.com/dataset/itihasa
+```
 Data cleaning: Preprocess the data to remove any noise or unwanted characters.
 Tokenization: Tokenize the dataset using the Hugging Face tokenizers.
 </details> <details> <summary><strong>Model Training and Fine-Tuning</strong></summary>
